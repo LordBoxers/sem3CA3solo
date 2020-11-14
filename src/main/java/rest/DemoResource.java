@@ -109,6 +109,7 @@ public class DemoResource {
     }
     @GET
     @Path("quickquote")
+    @RolesAllowed("user")
     @Produces(MediaType.APPLICATION_JSON)
     public String getQuickQuote() throws IOException {
         String quickQuote = HttpUtils.fetchData("https://tronalddump.io/random/quote");
